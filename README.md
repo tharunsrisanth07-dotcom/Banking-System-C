@@ -41,7 +41,7 @@ Tharun srisanth(BA2025033)	   - Implemented account creation, deposit, withdrawa
 
 Aarya k bhat(IE2025004)        - Developed fund transfer logic, balance enquiry and project documentation
 
-T Lalith Srikanth(BA2025051)	 - Implemented transaction logging, history display and debugging
+T Lalith Srikanth(BA2025051)	 - Implemented transaction logging, history display, file handling and debugging
 
 
 
