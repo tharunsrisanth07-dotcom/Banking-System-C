@@ -1,5 +1,5 @@
 # Banking-System-C
-<u>##1. Project Description</u>
+##1. Project Description
 The Bank Management System is a console-based application developed in the C programming language. It provides basic banking operations such as creating an account, depositing and withdrawing funds, transferring money between accounts, checking account balance, viewing transaction history, and displaying all stored accounts. The system uses file handling to store account details and transaction logs permanently, ensuring that data is retained even after the program ends.
 This project demonstrates key concepts of C programming including structures, pointers, file operations, modular programming, and user-driven menu execution.
 
