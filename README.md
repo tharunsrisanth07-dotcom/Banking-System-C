@@ -7,12 +7,19 @@ This project demonstrates key concepts of C programming including structures, po
 The system supports the following features:
 
 *Create Account – Registers a new customer with a unique account number and name.
+
 *Deposit Amount – Adds money to an account and updates balance.
+
 *Withdraw Amount – Deducts requested funds if sufficient balance is available.
+
 *Transfer Amount – Moves funds between two accounts and updates records.
+
 *Balance Enquiry – Displays the current balance of an account.
+
 *Transaction History – Shows previous transactions stored with type and updated balance.
+
 *Show All Accounts – Displays a list of all accounts created.
+
 *Exit – Allows the user to safely exit the system.
 
 ## 3. Implementation Steps
@@ -30,8 +37,11 @@ Step-by-step Implementation:
 ## 4. Breakdown of Contributions
 Team Member	Contribution
 Tharun srisanth(BA2025033)	   Implemented account creation, deposit, withdrawal features and Report writing
+
 Aarya k bhat(IE2025004)        Developed fund transfer logic, balance enquiry and project documentation
+
 T Lalith Srikanth(BA2025051)	 Implemented transaction logging, history display and debugging
+
 
 
 ## 5. Function Descriptions
@@ -62,8 +72,11 @@ Stores transaction details such as amount, new balance, and type (deposit/withdr
 ## Files in Project
 File	Description
 main.c	            Source code for the banking system
+
 accounts.dat	      Binary file containing stored account information
+
 history.txt        	Text file maintaining transaction history
+
 README.md	          Project report & documentation
 
 ## Conclusion
