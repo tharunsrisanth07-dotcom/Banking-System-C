@@ -1,7 +1,7 @@
 # Banking-System-C
 ## 1. Project Description
 The Bank Management System is a console-based application developed in the C programming language. It provides basic banking operations such as creating an account, depositing and withdrawing funds, transferring money between accounts, checking account balance, viewing transaction history, and displaying all stored accounts. The system uses file handling to store account details and transaction logs permanently, ensuring that data is retained even after the program ends.
-This project demonstrates key concepts of C programming including structures, pointers, file operations, modular programming, and user-driven menu execution.
+This project demonstrates key concepts of C programming including structures, pointers,linked lists, file operations, modular programming, and user-driven menu execution.
 
 ## 2. Functionalities in the Project
 The system supports the following features:
@@ -16,7 +16,7 @@ The system supports the following features:
 
 *Balance Enquiry – Displays the current balance of an account.
 
-*Transaction History – Shows previous transactions stored with type and updated balance.
+*Transaction History – Shows previous transactions stored with linked list type and updated balance.
 
 *Show All Accounts – Displays a list of all accounts created.
 
@@ -36,6 +36,7 @@ Step-by-step Implementation:
 
 ## 4. Breakdown of Contributions
 Team Member	Contribution
+
 Tharun srisanth(BA2025033)	   - Implemented account creation, deposit, withdrawal features and Report writing
 
 Aarya k bhat(IE2025004)        - Developed fund transfer logic, balance enquiry and project documentation
@@ -71,6 +72,7 @@ Stores transaction details such as amount, new balance, and type (deposit/withdr
 
 ## Files in Project
 File	Description
+
 main.c	            - Source code for the banking system
 
 accounts.dat	      - Binary file containing stored account information
@@ -80,4 +82,4 @@ history.txt        	- Text file maintaining transaction history
 README.md	          - Project report & documentation
 
 ## Conclusion
-This project successfully implements a functioning bank management system with essential operations and persistent file storage. It demonstrates the practical application of C structures, file handling, condition checking, loops, and menu-driven design.
+This project successfully implements a functioning bank management system with essential operations and persistent file storage. It demonstrates the practical application of C structures,linked lists, file handling, condition checking, loops, and menu-driven design.
