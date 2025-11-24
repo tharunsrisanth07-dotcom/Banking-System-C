@@ -36,11 +36,11 @@ Step-by-step Implementation:
 
 ## 4. Breakdown of Contributions
 Team Member	Contribution
-Tharun srisanth(BA2025033)	   Implemented account creation, deposit, withdrawal features and Report writing
+Tharun srisanth(BA2025033)	   - Implemented account creation, deposit, withdrawal features and Report writing
 
-Aarya k bhat(IE2025004)        Developed fund transfer logic, balance enquiry and project documentation
+Aarya k bhat(IE2025004)        - Developed fund transfer logic, balance enquiry and project documentation
 
-T Lalith Srikanth(BA2025051)	 Implemented transaction logging, history display and debugging
+T Lalith Srikanth(BA2025051)	 - Implemented transaction logging, history display and debugging
 
 
 
@@ -71,13 +71,13 @@ Stores transaction details such as amount, new balance, and type (deposit/withdr
 
 ## Files in Project
 File	Description
-main.c	            Source code for the banking system
+main.c	            - Source code for the banking system
 
-accounts.dat	      Binary file containing stored account information
+accounts.dat	      - Binary file containing stored account information
 
-history.txt        	Text file maintaining transaction history
+history.txt        	- Text file maintaining transaction history
 
-README.md	          Project report & documentation
+README.md	          - Project report & documentation
 
 ## Conclusion
 This project successfully implements a functioning bank management system with essential operations and persistent file storage. It demonstrates the practical application of C structures, file handling, condition checking, loops, and menu-driven design.
