@@ -120,9 +120,13 @@ Pauses execution until user input to improve user interface interaction.
 ### File	Purpose
 
 bank_system.c	       - Main implementation of the banking system
+
 accounts.dat	       - Binary storage for account records
+
 history.txt	         - Text-based transaction log history
+
 README.md	           - Project documentation
+
 ## Conclusion
 
 This project effectively demonstrates real-time banking operations using linked lists and persistent file storage in C. Converting from direct file access to a linked list significantly improved efficiency and flexibility in managing account records. The program is modular, scalable, and capable of further enhancements such as passwords, admin login, interest calculations, and GUI front-end
