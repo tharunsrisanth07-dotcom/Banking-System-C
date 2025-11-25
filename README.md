@@ -53,7 +53,7 @@ T Lalith Srikanth(BA2025051)	     - Implemented account operations (deposit, wit
 
 Tharun Srisanth(BA2025033)	       - Developed transaction logging, history display feature, testing and debugging
 
-## 5. Function Descriptions 
+## 5. Function Descriptions
 
 ### load_accounts()
 
