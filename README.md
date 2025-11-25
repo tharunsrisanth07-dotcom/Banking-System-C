@@ -3,7 +3,7 @@
 
 The Bank Management System is a console-based application developed in the C programming language that performs essential banking operations. The system stores account records in a singly linked list. This enables faster searching, dynamic insertion, and better memory utilization. Persistent storage is implemented through file handling (accounts.dat and history.txt) to ensure that data remains intact even after program termination.
 
-The program demonstrates key concepts of data structures (linked lists), file I/O, dynamic memory allocation, modular programming, pointers, and real-time transactional updates.
+The program demonstrates key concepts of data structures (linked lists), file I/O, dynamic memory allocation, pointers, and real-time transactional updates.
 
 ## 2. Functionalities
 ### Feature	Description
