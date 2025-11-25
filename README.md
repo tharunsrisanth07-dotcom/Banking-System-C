@@ -1,85 +1,128 @@
 # Banking-System-C
 ## 1. Project Description
-The Bank Management System is a console-based application developed in the C programming language. It provides basic banking operations such as creating an account, depositing and withdrawing funds, transferring money between accounts, checking account balance, viewing transaction history, and displaying all stored accounts. The system uses file handling to store account details and transaction logs permanently, ensuring that data is retained even after the program ends.
-This project demonstrates key concepts of C programming including structures, pointers,linked lists, file operations, modular programming, and user-driven menu execution.
 
-## 2. Functionalities in the Project
-The system supports the following features:
+The Bank Management System is a console-based application developed in the C programming language that performs essential banking operations. The system now stores account records in a singly linked list rather than directly accessing records from the file each time. This enables faster searching, dynamic insertion, and better memory utilization. Persistent storage is implemented through file handling (accounts.dat and history.txt) to ensure that data remains intact even after program termination.
 
-*Create Account – Registers a new customer with a unique account number and name.
+The program demonstrates key concepts of data structures (linked lists), file I/O, dynamic memory allocation, modular programming, pointers, and real-time transactional updates.
 
-*Deposit Amount – Adds money to an account and updates balance.
+## 2. Functionalities
+Feature	Description
 
-*Withdraw Amount – Deducts requested funds if sufficient balance is available.
+*Create Account	Adds a new account into a sorted linked list and saves to file.
 
-*Transfer Amount – Moves funds between two accounts and updates records.
+*Deposit Amount	Adds funds to an account and logs the history.
 
-*Balance Enquiry – Displays the current balance of an account.
+*Withdraw Amount	Deducts balance after validation and logs the transaction.
 
-*Transaction History – Shows previous transactions stored with linked list type and updated balance.
+*Transfer Amount	Transfers money between two accounts and records both sides of the transaction.
 
-*Show All Accounts – Displays a list of all accounts created.
+*Balance Enquiry	Displays the current account balance.
 
-*Exit – Allows the user to safely exit the system.
+*Transaction History	Shows all transactions related to an account from history.txt.
 
+*Show All Accounts	Displays all accounts sequentially from the linked list.
+
+*Exit	Saves data and terminates the program safely.
 ## 3. Implementation Steps
-Step-by-step Implementation:
 
-1. Defined structures for storing account details and transaction log structure.
-2. Used file handling (accounts.dat, history.txt) to store account information and transaction history.
-3. Implemented account creation, validating unique account numbers and writing to the account file.
-4. Developed deposit and withdrawal functions, updating balances directly in the binary file.
-5. Implemented fund transfer, checking validity of both accounts and updating balances accordingly.
-6. Logged all transactions in history.txt using the log_history() function.
-7. Implemented menu-driven UI inside main() to allow users to interact repeatedly.
-8. Built supporting features such as history display and full account list output.
+Defined the AccountNode structure for dynamically storing account data using a linked list.
+
+Loaded existing accounts from accounts.dat into a sorted linked list at startup (load_accounts()).
+
+Implemented sorted insertion to always maintain ordered accounts (insert_account_sorted()).
+
+Implemented search functionality for locating accounts efficiently (find_account()).
+
+Implemented account operations such as deposit, withdrawal, transfer with real-time value updates.
+
+Used save_accounts() to rewrite the updated linked list back to the file.
+
+Created transaction logging using append_history() that records every activity in history.txt.
+
+Designed a menu-driven UI, allowing repeated user interactions within the main loop.
+
+Freed all allocated memory before exit using delete_list() to avoid memory leaks.
 
 ## 4. Breakdown of Contributions
-Team Member	Contribution
 
-Tharun srisanth(BA2025033)	   - Implemented account creation, deposit, withdrawal features and Report writing
+### Team Member	Contribution
 
-Aarya k bhat(IE2025004)        - Developed fund transfer logic, balance enquiry and project documentation
+Aarya k bhat(IE2025004)    	       - Implemented linked list structure and file storage (load_accounts, save_accounts, insert_account_sorted)
 
-T Lalith Srikanth(BA2025051)	 - Implemented transaction logging, history display, file handling and debugging
+T Lalith Srikanth(BA2025051)	     - Implemented account operations (deposit, withdraw, transfer),prepared documentation and UI menu
 
+Tharun Srisanth(BA2025033)	       - Developed transaction logging, history display feature, testing and debugging
 
+## 5. Function Descriptions (2–3 lines each)
 
-## 5. Function Descriptions
+### load_accounts()
+
+Reads all stored accounts from accounts.dat and constructs a linked list. Each record is inserted into the list in sorted manner. Returns the head pointer of the list.
+
+### save_accounts()
+
+Writes the entire linked list of accounts to accounts.dat, ensuring persistent storage of updates. Returns 0 on success and -1 if file writing fails.
+
+### create_node()
+
+Dynamically allocates memory for a new account node and populates it with account number, name, and balance. Used internally during loading and creation of accounts.
+
+### insert_account_sorted()
+
+Inserts an account node in ascending order based on account number. Prevents duplicate entries and maintains a sorted linked list.
+
+### find_account()
+
+Searches through the linked list to find an account by account number. Returns a pointer to the node if found, otherwise returns NULL.
+
+### delete_list()
+
+Frees all memory allocations used in the linked list before program exit, preventing memory leaks.
+
 ### create_account()
-Creates a new bank account by taking account number and name as input. Checks for duplicates before storing data. Initializes balance to zero and writes details to accounts.dat.
+
+Allows a user to register a new bank account. Validates for duplicates, inserts the account into the linked list, and updates the file.
 
 ### deposit_amount()
-Lets the user deposit funds into an existing account by updating the stored balance in the file. Records the transaction in history.txt and displays the new balance.
+
+Deposits a specified amount into an account after validation, updates balance in memory and file, and logs the transaction in history.
 
 ### withdraw_amount()
-Withdraws money after validating sufficient balance. Updates the account record in the binary file and logs the transaction for future reference.
+
+Withdraws money after checking sufficient funds. Updates both linked list and file storage, and logs the event.
 
 ### transfer_amount()
-Transfers money between two accounts after validating both accounts and balance availability. Updates both accounts’ records and logs debit and credit actions separately.
+
+Performs fund transfer from one account to another, checking existence and balance availability. Logs both debit and credit operations.
 
 ### balance_enquiry()
-Displays the current balance of a specified account by reading from accounts.dat.
+
+Displays the available balance of a specified account using find_account().
+
+### append_history()
+
+Records transaction details such as amount, updated balance, and status code (deposit, withdraw, transfer sent/received).
 
 ### check_history()
-Reads from history.txt to show all past transactions associated with a given account number.
+
+Reads history.txt and prints all matching transaction logs for a given account number.
 
 ### show_all_accounts()
-Displays all existing accounts with account number, name, and balance.
 
-### log_history()
-Stores transaction details such as amount, new balance, and type (deposit/withdraw/transfer) into history.txt
+Traverses through the linked list and prints complete account details.
 
-## Files in Project
-File	Description
+### press_enter_to_continue()
 
-main.c	            - Source code for the banking system
+Pauses execution until user input to improve user interface interaction.
 
-accounts.dat	      - Binary file containing stored account information
 
-history.txt        	- Text file maintaining transaction history
+## Files Included
+### File	Purpose
 
-README.md	          - Project report & documentation
-
+bank_system.c	       - Main implementation of the banking system
+accounts.dat	       - Binary storage for account records
+history.txt	         - Text-based transaction log history
+README.md	           - Project documentation
 ## Conclusion
-This project successfully implements a functioning bank management system with essential operations and persistent file storage. It demonstrates the practical application of C structures,linked lists, file handling, condition checking, loops, and menu-driven design.
+
+This project effectively demonstrates real-time banking operations using linked lists and persistent file storage in C. Converting from direct file access to a linked list significantly improved efficiency and flexibility in managing account records. The program is modular, scalable, and capable of further enhancements such as passwords, admin login, interest calculations, and GUI front-end
