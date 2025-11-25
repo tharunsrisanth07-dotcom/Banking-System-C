@@ -1,28 +1,28 @@
 # Banking-System-C
 ## 1. Project Description
 
-The Bank Management System is a console-based application developed in the C programming language that performs essential banking operations. The system now stores account records in a singly linked list rather than directly accessing records from the file each time. This enables faster searching, dynamic insertion, and better memory utilization. Persistent storage is implemented through file handling (accounts.dat and history.txt) to ensure that data remains intact even after program termination.
+The Bank Management System is a console-based application developed in the C programming language that performs essential banking operations. The system stores account records in a singly linked list. This enables faster searching, dynamic insertion, and better memory utilization. Persistent storage is implemented through file handling (accounts.dat and history.txt) to ensure that data remains intact even after program termination.
 
 The program demonstrates key concepts of data structures (linked lists), file I/O, dynamic memory allocation, modular programming, pointers, and real-time transactional updates.
 
 ## 2. Functionalities
-Feature	Description
+### Feature	Description
 
-*Create Account	Adds a new account into a sorted linked list and saves to file.
+*Create Account	         - Adds a new account into a sorted linked list and saves to file.
 
-*Deposit Amount	Adds funds to an account and logs the history.
+*Deposit Amount	         - Adds funds to an account and logs the history.
 
-*Withdraw Amount	Deducts balance after validation and logs the transaction.
+*Withdraw Amount         - Deducts balance after validation and logs the transaction.
 
-*Transfer Amount	Transfers money between two accounts and records both sides of the transaction.
+*Transfer Amount	       - Transfers money between two accounts and records both sides of the transaction.
 
-*Balance Enquiry	Displays the current account balance.
+*Balance Enquiry	       - Displays the current account balance.
 
-*Transaction History	Shows all transactions related to an account from history.txt.
+*Transaction History	   - Shows all transactions related to an account from history.txt.
 
-*Show All Accounts	Displays all accounts sequentially from the linked list.
+*Show All Accounts	     - Displays all accounts sequentially from the linked list.
 
-*Exit	Saves data and terminates the program safely.
+*Exit	                   - Saves data and terminates the program safely.
 ## 3. Implementation Steps
 
 Defined the AccountNode structure for dynamically storing account data using a linked list.
