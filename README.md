@@ -27,7 +27,7 @@ The program demonstrates key concepts of data structures (linked lists), file I/
 
 Defined the AccountNode structure for dynamically storing account data using a linked list.
 
-Loaded existing accounts from accounts.dat into a sorted linked list at startup (load_accounts()).
+Loaded existing accounts from accounts.dat into a sorted linked list at start (load_accounts()).
 
 Implemented sorted insertion to always maintain ordered accounts (insert_account_sorted()).
 
@@ -129,4 +129,4 @@ README.md	           - Project documentation
 
 ## Conclusion
 
-This project effectively demonstrates real-time banking operations using linked lists and persistent file storage in C. Converting from direct file access to a linked list significantly improved efficiency and flexibility in managing account records. The program is modular, scalable, and capable of further enhancements such as passwords, admin login, interest calculations, and GUI front-end
+This project effectively demonstrates real-time banking operations using linked lists and persistent file storage in C. Converting from direct file access to a linked list significantly improved efficiency and flexibility in managing account records.
